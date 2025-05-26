@@ -9,9 +9,20 @@ dependencies    = [
 ]
 
 [project.scripts]
-rustup-init = "rustup:init"
-cargo       = "rustup:cargo"
-rustc       = "rustup:rustc"
+rustup-init   = "rustup:init"
+cargo         = "rustup:cargo"
+cargo-clippy  = "rustup:cargo_clippy"
+cargo-fmt     = "rustup:cargo_fmt"
+cargo-miri    = "rustup:cargo_miri"
+clippy-driver = "rustup:clippy_driver"
+rls           = "rustup:rls"
+rust-analyzer = "rustup:rust_analyzer"
+rust-gdb      = "rustup:rust_gdb"
+rust-gdbgui   = "rustup:rust_gdbgui"
+rust-lldb     = "rustup:rust_lldb"
+rustc         = "rustup:rustc"
+rustdoc       = "rustup:rustdoc"
+rustfmt       = "rustup:rustfmt"
 
 [build-system]
 requires = ["hatchling"]
