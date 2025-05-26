@@ -8,16 +8,14 @@ from pathlib import Path
 def path() -> Path:
     return Path(shutil.which("rustup"))
 
-def _make_shim(proxy: str, args: list[str]=None) -> None:
-    if args is None:
-        args = sys.argv[1:]
-    os.execv(path(), (proxy, *args))
+def _make_shim(proxy: str) -> None:
+    os.execv(path(), (proxy, *sys.argv[1:]))
 
-def init(args: list[str]=None) -> None:
-    _make_shim("rustup-init", args)
+def init() -> None:
+    _make_shim("rustup-init")
 
-def cargo(args: list[str]=None) -> None:
-    _make_shim("cargo", args)
+def cargo() -> None:
+    _make_shim("cargo")
 
-def rustc(args: list[str]=None) -> None:
-    _make_shim("rustc",*args)
+def rustc() -> None:
+    _make_shim("rustc")

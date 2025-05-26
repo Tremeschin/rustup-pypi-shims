@@ -35,4 +35,4 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "rustup", specifier = ">=1.28.2" }]
+requires-dist = [{ name = "rustup", specifier = "~=1.28.2" }]
